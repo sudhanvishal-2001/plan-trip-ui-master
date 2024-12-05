@@ -1,0 +1,232 @@
+.roundimage {
+    border-radius: 45.3px;
+    width: 45rem;
+    height: 90%;
+    object-fit: cover !important;
+    overflow: hidden;
+    opacity: 1 !important;
+}
+
+.arrows {
+    /* position: absolute;
+    top: 50%; */
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 2;
+    pointer-events: none;
+    /* Prevent arrows from blocking other interactions */
+}
+
+
+
+.arrow {
+    pointer-events: auto;
+    /* Allow clicks on arrows */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.arrow:hover {
+    background-color: orange;
+    transform: scale(1.1);
+}
+
+.left-arrow {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.right-arrow {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.pagination-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.pagination-dots .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-dots .dot.active {
+    background-color: orange;
+    /* width: 16px;
+    height: 16px; */
+    transition: all 0.3s ease;
+}
+
+.pagination-dots .dot:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.fixed-icons-topleft {
+    position: absolute;
+    top: 9%;
+    /* Adjust based on design */
+    left: 0%;
+    transform: translate(0%);
+    display: flex;
+    justify-content: start;
+    width: 100px;
+    /* Adjust width for spacing icons */
+    z-index: 2;
+    /* Ensure it stays above the carousel */
+    gap: 5px;
+}
+
+.fixed-icons-topright {
+    position: absolute;
+    top: 9%;
+    right: 0%;
+    transform: translate(-0%);
+    display: flex;
+    justify-content: start;
+    width: fit-content;
+    z-index: 2;
+    gap: 5px;
+}
+
+.fixed-icons-bottomright {
+    position: absolute;
+    bottom: 10%;
+    left: 2%;
+    transform: translate(-0%);
+    display: flex;
+    justify-content: start;
+    width: fit-content;
+    z-index: 2;
+    gap: 5px;
+    align-items: start !important;
+}
+
+.fixed-icons-container {
+    /* width: 50rem;
+    height: 100%; */
+    position: fixed;
+    z-index: 1000;
+    /* left: 2%; */
+
+    left: 50%;
+    transform: translateX(-50%);
+    width: 43rem;
+    height: 400px;
+    margin: 0rem auto;
+
+}
+
+.fixed-icons {
+    position: absolute;
+    top: 45%;
+    /* Adjust based on design */
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
+    /* Adjust width for spacing icons */
+    z-index: 2;
+    /* Ensure it stays above the carousel */
+
+    gap: 5px;
+
+}
+
+.fixed-icons .icon,
+.fixed-icons-topleft .icon,
+.fixed-icons-topright .icon,
+.fixed-icons-bottomright .icon {
+    font-size: 24px;
+    /* Adjust icon size */
+    background: #0000008F;
+
+    border-radius: 50%;
+    /* padding: 10px; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional shadow */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+}
+
+.fixed-icons-bottomright .icon {
+    background: linear-gradient(90deg, #FCE8A3 32.41%, #FD9F69 105.07%) !important;
+
+
+}
+
+.black-text{color: #222222 !important;}
+
+.fixed-icons-topleft .icon {
+    width: 3rem !important;
+    height: 3rem !important;
+
+}
+.fixed-icons-topright .icon , .fixed-icons-bottomright .icon{ 
+    gap: 0.5rem;
+    width: fit-content !important;
+    height: 1.7rem !important;
+    border-radius: 29.67px !important;
+    padding: 0.4rem 0.7rem; 
+}
+/* .fixed-icons .icon:hover,
+.fixed-icons-topleft .icon:hover,
+.fixed-icons-topright .icon:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+} */
+
+.carousel-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icon-size {
+    width: 1.7rem;
+}
+
+.icon-size-lg {
+    width: 2.2rem;
+}
+.icon-size-md {
+    width: 1.2rem;
+}
+
+.icon-size-sm {
+    width: 2rem;
+}
+
+.css-1fzpoyk{
+    opacity: 1 !important;
+}

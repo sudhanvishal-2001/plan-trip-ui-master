@@ -1,0 +1,291 @@
+.bg1{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+    
+}
+.bg1 img{
+    width: 100%;
+    height: 100%;
+    transition: transform 3s ease-in-out;
+}
+
+.bg1.zoom img {
+    transform: scale(1.2); 
+  }
+
+.human{  
+  position: absolute;
+  top: 21px;
+  left: -111px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+  .bg2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bg2 img {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    left: 8vw;
+    bottom: 0;
+    transform: scale(1 ); /* Adjust scale to zoom out (smaller size) */
+    transition: width 3s ease-in-out, height 3s ease-in-out,transform 2s ease-in-out;
+}
+
+/* Active state for zoom */
+.bg2.active img {
+    width: 65%; /* Shrink width */
+    height: 65%;
+    transform: scale(1)translateX(-1vw); /* Apply zoom */
+}
+
+
+
+
+
+.bg3 {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 35vh;
+    width: 26vw;
+    opacity: 1; 
+}
+
+.bg3 img{
+    height: 70%; 
+    width: 70%;
+    opacity: 0; 
+    transform: scale(1); 
+    transform-origin: right bottom;
+    transition: transform 3s ease-in-out, opacity 3s ease-in-out,width 3s ease-in-out, height 3s ease-in-out;   
+}
+
+
+.bg3.active img {
+    height: 100%; 
+    width: 100%;
+    opacity: 1; 
+    transform: scale(1.2);
+}
+
+
+.logo{
+  position:absolute;
+  width: 15.99vw;
+  height: 10.05vh;
+  top: 3vh;
+  left: 1.41vw;
+  padding: 0px 0px 0px 0.034vw;
+  gap: 0vw; /* or 0vh */
+  z-index: 1000;
+}
+
+.profilelogo{
+    position:absolute;
+    top: 5vh;
+    right: 3vw;
+    height: 5vh;
+    width: 2.5vw;
+    z-index: 1000;
+}
+
+.CgProfile{
+  color: white;
+  height: 100%;
+  width: 100%;
+}
+
+
+.belllogo{
+    position:absolute;
+    top: 5vh;
+    right: 7vw;
+    height: 5vh;
+    width: 2.5vw;
+    z-index: 1000;
+}
+
+
+
+
+
+.profilelogo,
+.belllogo {
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} 
+
+.logo {
+  opacity: 0;
+  animation: fadeInFromTop 3s ease-in-out forwards;
+}
+
+/* Keyframes for fade-in from top to bottom */
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Start from top */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}
+
+
+.Stalemate-text {
+  font-family: "Stalemate", cursive;
+  font-size: 220.73px;
+  font-weight: 400;
+  line-height: 1;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.Helvetica-text {
+  font-family: Helvetica, sans-serif;
+  font-size: 43.01px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.Roboto-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 43.01px;
+  font-weight: 400;
+  line-height: 1;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  white-space: nowrap;
+  color: white;
+}
+
+.Roboto-text-small {
+    font-family: "Roboto", sans-serif;
+    font-size: 26.69px;
+    font-weight: 400;
+    line-height: 31.28px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    position: absolute;
+    top: -50px;
+    left: -7.8rem;
+}
+  .banner-content {
+    position: absolute;
+    top: 18%;
+    left: 37%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 1; 
+    animation: text-appear 3s ease-out forwards;
+  }
+  
+  @keyframes text-appear {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(0.8);
+      opacity: 1;
+    }
+  }
+  .banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../Assets/HomeBanner.jpg') no-repeat center/cover;
+    transform: scale(1);
+    animation: background-zoom 9s forwards;
+    z-index: -1;
+    /* Keeps background behind content */
+  }
+  /* Background zoom keyframes */
+  @keyframes background-zoom {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(1.2);
+    }
+  }
+  
+
+  .human{  
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: scale(1.5); /* Initial state: no scaling */
+    animation: zoomEffect 4s ease-in-out forwards;
+  
+  }
+
+  /* @keyframes background-zoomout {
+    0% {
+      transform: scale(1) translateX(0);
+    }
+    100% {
+      transform: scale(1.1) translateX(-1vw);
+    }
+  } */
+
+
+  @keyframes zoomEffect {
+    0% {
+      width: 70%;
+      height: 70%;
+      transform: scale(1.5) translateX(0);
+    }
+    100% {
+      width: 65%;  /* Shrink width */
+      height: 65%; /* Shrink height */
+      transform: scale(1.2) ; /* Apply zoom and slight horizontal shift */
+    }
+  }
