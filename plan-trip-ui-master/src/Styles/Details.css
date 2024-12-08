@@ -44,6 +44,10 @@
 .details-content{
     background-color: rgba(255, 255, 255, 0);
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items:normal;
+    justify-content: space-between;
     top: 23vh;
     left: 8vw;
     height: 58vh;
@@ -61,11 +65,11 @@
 
 .details-title1{
     font-size: 1.5rem;
-    background-color: yellow;
+    background-color:#ffa62a;
     color: #151939;
     margin-left: 1rem;
     border-radius: 2rem;
-    padding: 0.8rem;
+    padding: 0.5rem;
 }
 
 .details-location, .details-Rating, .details-txt{
@@ -75,23 +79,23 @@
 
 .details-act{
     display: flex;
-    height: 12vh;
-    justify-content: space-evenly;
+    /* height: 12vh; */
+    justify-content:space-between;
 }
 
 .details-act div{
     font-size: 1.5rem;
 }
 .details-act p{
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
     font-size: 2.5rem;
     font-weight: bold;
 }
 
 .details-price{
-    height: 8vh;
-    margin-top: 3rem;
+    /* height: 8vh;
+    margin-top: 3rem; */
     display: flex;
     font-size: 1.5rem;
     text-align: center;
@@ -101,4 +105,48 @@
 .details-price1{
     font-size: 2.5rem;
     margin-left: 4rem;
+}
+
+.Itineraries-btn{
+    position: relative;
+    left: 16vw;
+    background: linear-gradient(90deg, #FCE8A3 32.41%, #FD9F69 105.07%);
+    color: #151939;
+    font-weight:bolder;
+    height: 6vh;
+    width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.pyt{
+    border: 1.31px solid;
+    background: conic-gradient(from 180deg at 50% 50%, #120020 0deg, #FD9F69 53.3deg, #FCE8A3 90.46deg, #2D3E6C 126.24deg, #120020 178.82deg, #120020 360deg);
+    position: absolute;
+    top:88vh;
+    left: 45%;
+    height: 6vh;
+    width: 10.2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+}
+
+.pyt1{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    color: white;
+    background: #120020f6;
+    height: 5.5vh;
+    width: 10vw;
+    border-radius: 5rem;
+}
+
+.pyt1 img{
+    height: 2rem;
+    width: 2rem;
 }

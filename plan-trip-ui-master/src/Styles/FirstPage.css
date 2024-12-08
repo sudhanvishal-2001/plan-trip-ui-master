@@ -84,14 +84,15 @@
   background-color: #ff9f5c;
   /* Replace with your desired color */
   color: black;
+  cursor: default;
 }
 
-.toggle-button:hover {
+/* .toggle-button:hover {
   opacity: 0.8;
-}
+} */
 
 
-.toggle-container.multi {
+ .toggle-container  /*.multi */ { 
   border: 0.5px solid #FFFFFF;
 }
 
@@ -380,6 +381,7 @@
   bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 }
 
 .button-icon {
@@ -493,7 +495,7 @@
   padding: 20px;
 }
 
-.sidebararrow {
+/* .sidebararrow {
   background: #FFFFFF66;
   position: absolute;
   top: 45%;
@@ -505,12 +507,28 @@
   cursor: pointer;
   opacity: 1;
   transition: opacity 0.3s ease, left 0.3s ease;
+} */
+.sidebararrow {
+  position: absolute;
+  top: 40%;
+  left: 0vw;
+  margin-top: 3vw;
+  width: 3vw;
+  height: 5vw;
+  background: #FFFFFF66;
+  transform: perspective(5vw) rotateY(60deg);
+  border-radius: 1px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
 }
 
 
 .sidearrowicon {
+  position: absolute;
+  left: 5px;
   height: 100%;
-  width: 20%;
+  width: 30%;
   margin-left: 0.3rem;
 }
 
@@ -518,6 +536,7 @@
   left: 200px;
   /* Move the arrow along with the sidebar */
 }
+
 
 /* Hide the arrow when sidebar is open */
 .sidebararrow.hide {
@@ -557,6 +576,28 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
+.icon-sidebar-container span {
+  color: #ffffff; /* Default text color */
+}
+
+.icon-sidebar-container.active span {
+  color: #ff9f5c; /* Change to red when active */
+}
+
+.icon-sidebar-container img {
+  filter: brightness(70%) saturate(1);
+  filter: contrast(50%);
+  transition: filter 0.3s ease;
+} 
+
+.icon-sidebar-container.active img {
+  filter: brightness(100%) saturate(2);
+  filter: contrast(100%);
+  transform: scale(1.1); /* Optional: Add a slight zoom effect */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
 
 
 
@@ -650,6 +691,14 @@
   color: #FFFFFF;
 
 
+}
+
+.inter{
+  font-family: inter;
+}
+
+.Poppins{
+  font-family: Poppins;
 }
 
 
@@ -893,6 +942,7 @@
   overflow-y: scroll; /* Allow scrolling but hide scrollbar */
   height: 100%;
   scrollbar-width: none; /* For Firefox */
+  cursor: pointer;
 }
 
 .scrollable-icons::-webkit-scrollbar {

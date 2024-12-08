@@ -101,7 +101,7 @@ function App() {
                 y: "-100%",        // Slide up
                 opacity: 0,          // Fade out
                 transition: {
-                  y: { duration: 0 },  // Slide transition duration
+                  y: { duration: 1 },  // Slide transition duration
                   opacity: { duration: 0, delay: 0 }  // Fade transition happens after slide
                 }
               }}
@@ -120,6 +120,7 @@ function App() {
                 justifyContent: 'center',
                 height: '100vh',
               }}
+              
             >
               <FirstPage />
             </motion.div>}

@@ -78,6 +78,7 @@ export default function App() {
                     { key: 1, content: <img src={imageslide} alt="Slide 1" className="roundimage"/> },
                     { key: 2, content: <img src={imageslide1} alt="Slide 2" className="roundimage" /> },
                     { key: 3, content: <img src={imageslide2} alt="Slide 3" className="roundimage" /> },
+                    
                 ]}
                 offset={2}
                 showArrows={false}

@@ -103,6 +103,8 @@ export const FirstPage = () => {
     },
   ];
 
+  
+
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -112,6 +114,13 @@ export const FirstPage = () => {
 
   const closeSidebar = () => {
     setIsOpen(false);
+  };
+
+  const [activeIcon, setActiveIcon] = useState(null);
+  
+
+  const handleIconClick = (icon) => {
+    setActiveIcon(icon);
   };
 
 
@@ -231,58 +240,54 @@ export const FirstPage = () => {
         <p className=" Roboto-text-mini">Plan Your Trip</p>
       </div>
 
+        
 
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-        <div className="sidebarcontent">
-          <button className="closebtn" onClick={closeSidebar}>
+      <div className="sidebarcontent">
+        <button className="closebtn" onClick={closeSidebar}>
           <img src={CloseIcon} />
-          </button>
-          <div className="sidebar-contents">
+        </button>
+        <div className="sidebar-contents">
           <div className="scrollable-icons">
-        <div className="icon-sidebar-container"> 
-          <img src={vaccationIcon} className="icon-size-lg" /> 
-          <span className="Helvetica-text-icon">Beaches</span>
-        </div>
-        <div className="icon-sidebar-container">
-          <img src={desert} className="icon-size-lg" />
-          <span className="Helvetica-text-icon">Deserts</span>
-        </div>
-        <div className="icon-sidebar-container">
-          <img src={mountain} className="icon-size-lg" />
-          <span className="Helvetica-text-icon">Mountains</span>
-        </div>
-        <div className="icon-sidebar-container">
-          <img src={iconicCities} className="icon-size-lg" />
-          <span className="Helvetica-text-icon">Iconic cities</span>
-        </div>
-        <div className="icon-sidebar-container">
-          <img src={houseboat} className="icon-size-lg" />
-          <span className="Helvetica-text-icon">Houseboats</span>
-        </div>
-        <div className="icon-sidebar-container"> 
-          <img src={vaccationIcon} className="icon-size-lg" /> 
-          <span className="Helvetica-text-icon">Beaches</span>
-        </div>
-        <div className="icon-sidebar-container">
-          <img src={desert} className="icon-size-lg" />
-          <span className="Helvetica-text-icon">Deserts</span>
-        </div>
-        <div className="icon-sidebar-container">
-          <img src={mountain} className="icon-size-lg" />
-          <span className="Helvetica-text-icon">Mountains</span>
-        </div>
-        <div className="icon-sidebar-container">
-          <img src={iconicCities} className="icon-size-lg" />
-          <span className="Helvetica-text-icon">Iconic cities</span>
-        </div>
-        <div className="icon-sidebar-container">
-          <img src={houseboat} className="icon-size-lg" />
-          <span className="Helvetica-text-icon">Houseboats</span>
-        </div>
-        
-      </div> </div>
+            <div
+              className={`icon-sidebar-container ${activeIcon === 'beaches' ? 'active' : ''}`}
+              onClick={() => handleIconClick('beaches')}
+            >
+              <img src={vaccationIcon} className="icon-size-lg" />
+              <span className="Helvetica-text-icon">Beaches</span>
+            </div>
+            <div
+              className={`icon-sidebar-container ${activeIcon === 'deserts' ? 'active' : ''}`}
+              onClick={() => handleIconClick('deserts')}
+            >
+              <img src={desert} className="icon-size-lg" />
+              <span className="Helvetica-text-icon">Deserts</span>
+            </div>
+            <div
+              className={`icon-sidebar-container ${activeIcon === 'mountains' ? 'active' : ''}`}
+              onClick={() => handleIconClick('mountains')}
+            >
+              <img src={mountain} className="icon-size-lg" />
+              <span className="Helvetica-text-icon">Mountains</span>
+            </div>
+            <div
+              className={`icon-sidebar-container ${activeIcon === 'iconicCities' ? 'active' : ''}`}
+              onClick={() => handleIconClick('iconicCities')}
+            >
+              <img src={iconicCities} className="icon-size-lg" />
+              <span className="Helvetica-text-icon">Iconic cities</span>
+            </div>
+            <div
+              className={`icon-sidebar-container ${activeIcon === 'houseboats' ? 'active' : ''}`}
+              onClick={() => handleIconClick('houseboats')}
+            >
+              <img src={houseboat} className="icon-size-lg" />
+              <span className="Helvetica-text-icon">Houseboats</span>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
       <div className={`sidebararrow ${isOpen ? 'hide' : ''}`} onClick={toggleSidebar}>
         {/* <MdKeyboardDoubleArrowRight className="sidearrowicon" />
