@@ -290,8 +290,6 @@ export const FirstPage = () => {
     </div>
 
       <div className={`sidebararrow ${isOpen ? 'hide' : ''}`} onClick={toggleSidebar}>
-        {/* <MdKeyboardDoubleArrowRight className="sidearrowicon" />
-         */}
         <img src={ExpanbarIcon} className="sidearrowicon" />
       </div>
 
